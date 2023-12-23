@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Определение XAML-страницы для отображения данных о предыдущей записи пользователя -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Личный кабинет"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Clockwork.HisPage"
+             BackgroundColor="#2F2F2F">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Padding="20">
+            <!-- Заголовок раздела с данными записи -->
+            <Label Text="Запись:" TextColor="#ED1B23" FontFamily="Med" FontSize="22" FontAttributes="Bold"/>
+
+            <!-- Метки для отображения данных о записи (имя, телефон, дата и время, адрес) -->
+            <Label x:Name="phoneLabel" Text="" FontSize="18" TextColor="#E8F1F2" FontFamily="Thin" TextDecorations="Underline"/>
+            <Label x:Name="nameLabel" Text="" FontSize="18" TextColor="#E8F1F2" FontFamily="Thin" TextDecorations="Underline"/>
+            <Label x:Name="datetimeLabel" Text="" FontSize="18" TextColor="#E8F1F2" FontFamily="Thin" TextDecorations="Underline"/>
+            <Label x:Name="addressLabel" Text="" FontSize="18" TextColor="#E8F1F2" FontFamily="Thin" TextDecorations="Underline"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

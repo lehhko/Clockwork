@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Определение страницы с деталями об услуге в Xamarin.Forms -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clockwork.ServiceDetailsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F">
+
+    <!-- Основная разметка страницы - Grid с двумя строками -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Первая строка - заполняется пространством, оставшимся после других элементов -->
+            <RowDefinition Height="*" />
+            <!-- Вторая строка - высота подстраивается под содержимое -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- StackLayout в первой строке с основными элементами формы -->
+        <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" Padding="20">
+            <!-- Заголовок формы -->
+            <Label Text="Форма онлайн-записи" FontSize="22" TextColor="#E8F1F2" FontFamily="Med"/>
+
+            <!-- Поля ввода для имени и телефона -->
+            <Label Text="Имя" TextColor="#E8F1F2" FontFamily="Thin"/>
+            <Entry x:Name="nameEntry" Placeholder="Введите ваше имя" />
+
+            <Label Text="Телефон" TextColor="#E8F1F2" FontFamily="Thin"/>
+            <Entry x:Name="phoneEntry" Placeholder="Введите ваш номер телефона" />
+
+            <!-- Выбор даты и времени -->
+            <Label Text="Дата и время предпочтительной записи" TextColor="#E8F1F2" FontFamily="Thin"/>
+            <DatePicker x:Name="datePicker" />
+            <TimePicker x:Name="timePicker" />
+
+            <!-- Выбор адреса из выпадающего списка -->
+            <Label Text="Выберите адрес сервиса" TextColor="#E8F1F2" FontFamily="Thin"/>
+            <Picker x:Name="addressPicker" Title="Выберите ваш адрес">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>г.Москва, Цветной бульвар, 15с1</x:String>
+                        <x:String>г.Санкт-Петербург, Невский проспект, 35</x:String>
+                        <x:String>г.Казань, ул. Восстания, 86</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Кнопка для записи на услугу -->
+            <Button Text="Записаться" Clicked="BookAppointmentButton_Clicked"
+                    CornerRadius="10" TextColor="#E8F1F2" FontFamily="Med" BackgroundColor="#ED1B23"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <!-- StackLayout во второй строке с кнопками для навигации -->
+        <StackLayout Grid.Row="1" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+            <!-- Кнопка для отображения данных заявки -->
+            <Button x:Name="showDataButton" Text="Показать данные заявки" Clicked="GoToHisPage_Clicked"
+                    CornerRadius="10" TextColor="#E8F1F2" FontFamily="Med" BackgroundColor="#ED1B23"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <!-- Кнопка для возврата на главную страницу -->
+            <Button Text="Вернуться на главную страницу"
+                    CornerRadius="10" TextColor="#E8F1F2" FontFamily="Med" BackgroundColor="#"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="BackButton_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

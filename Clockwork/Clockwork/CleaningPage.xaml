@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clockwork.CleaningPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F">
+
+    <!-- Главный контейнер для элементов страницы -->
+    <StackLayout>
+        <!-- Заголовок страницы -->
+        <Label Text="Выберите услугу:" FontSize="24"
+               FontFamily="Med"
+               TextColor="#E8F1F2"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+
+        <!-- Первая услуга: Чистка часового механизма -->
+        <StackLayout>
+            <Label Text="Чистка часового механизма" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service1Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" 
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="1490.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Вторая услуга: Чистка браслета -->
+        <StackLayout>
+            <Label Text="Чистка браслета" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service2Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" 
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="990.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Отображение общей стоимости выбранных услуг -->
+        <Label Text="Общая стоимость: р." x:Name="totalCostLabel" TextColor="#E8F1F2" FontFamily="Thin" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+
+        <!-- Кнопка для записи на выбранные услуги -->
+        <Button Text="Записаться"
+                CornerRadius="10"
+                FontFamily="Med"
+                BackgroundColor="#ED1B23"
+                TextColor="#E8F1F2"
+                Clicked="BookAppointmentButton_Clicked"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+
+        <!-- Кнопка для возврата на предыдущую страницу -->
+        <Button Text="Назад" CornerRadius="10" Clicked="GoBack_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Определение страницы с выбором услуг для ремонта в Xamarin.Forms -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="Clockwork.RepairPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F">
+
+    <!-- Основной макет страницы - вертикальный StackLayout -->
+    <StackLayout>
+        <!-- Заголовок страницы -->
+        <Label Text="Выберите услуги:"
+               FontFamily="Med"
+               TextColor="#E8F1F2"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="24" />
+
+        <!-- Первая услуга: Анализ -->
+        <StackLayout>
+            <Label Text="Анализ" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service1Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center"
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="490.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Вторая услуга: Диагностика -->
+        <StackLayout>
+            <Label Text="Диагностика" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service2Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" 
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="490.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Третья услуга: Ремонт часового механизма -->
+        <StackLayout>
+            <Label Text="Ремонт часового механизма" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service3Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" 
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="1490.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Четвертая услуга: Восстановление -->
+        <StackLayout>
+            <Label Text="Восстановление" TextColor="#E8F1F2" FontFamily="Thin" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Switch x:Name="service4Switch" Margin="30,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" 
+                    Toggled="ServiceSwitch_Toggled"/>
+            <Label Text="990.00р." Margin="30,0,0,0" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Отображение общей стоимости -->
+        <Label Text="Общая стоимость: р." x:Name="totalCostLabel" TextColor="#E8F1F2" FontFamily="Thin" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+
+        <!-- Кнопка для перехода на страницу с формой онлайн-записи -->
+        <Button Text="Записаться"
+                BackgroundColor="#ED1B23"
+                TextColor="#E8F1F2"
+                CornerRadius="10"
+                FontFamily="Med"
+                Clicked="BookAppointmentButton_Clicked"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+
+        <!-- Кнопка для возврата на предыдущую страницу -->
+        <Button Text="Назад" CornerRadius="10" Clicked="GoBack_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

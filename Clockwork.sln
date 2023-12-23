@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clockwork.Android", "Clockwork\Clockwork.Android\Clockwork.Android.csproj", "{06F298ED-4559-4860-9B4F-A243885102EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clockwork", "Clockwork\Clockwork\Clockwork.csproj", "{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F298ED-4559-4860-9B4F-A243885102EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC767074-A6D0-4DDA-B91E-0EB5A9766EAB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C811A8A-B179-403F-8353-46352E99DA53}
+	EndGlobalSection
+EndGlobal
